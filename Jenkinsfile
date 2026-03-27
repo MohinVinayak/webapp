@@ -26,10 +26,12 @@ pipeline {
                 }
             }
         }
-        stage('Sonar-Report') {
-            steps {
-                bat 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish'
-            }
-        }
+stage('Sonar-Report') {
+    steps {
+        // Use 'bat' for your Windows slave01
+        // Paste your token exactly as it appeared after clicking Generate
+        bat 'mvn sonar:sonar -Dsonar.host.url=http://172.16.213.111:9000 -Dsonar.login=sqa_bb9b8d3f4b6017c6dd851405efd12531e1380600'
+    }
+}
     }
 }
