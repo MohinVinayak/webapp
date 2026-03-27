@@ -8,6 +8,7 @@ pipeline {
                 bat 'mvn -B -DskipTests clean package'
             }
         }
+        //comment
 //         stage('Sonar-Report') {
 //             steps {
 //             sh 'mvn sonar:sonar \
