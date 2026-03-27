@@ -14,6 +14,22 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>upes</id>
+      <name>Releases</name>
+      <url>http://localhost:8082/nexus/content/repositories/upes/</url>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>upes</id>
+      <name>Releases</name>
+      <url>http://localhost:8082/nexus/content/repositories/upes/</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -47,10 +63,10 @@
         <version>2.3</version>
     </dependency>
     <dependency>
-		  <groupId>org.sonarsource.scanner.maven</groupId>
-		  <artifactId>sonar-maven-plugin</artifactId>
-		  <version>3.2</version>
-	  </dependency>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.2</version>
+      </dependency>
   </dependencies>
 
   <build>
@@ -90,5 +106,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
